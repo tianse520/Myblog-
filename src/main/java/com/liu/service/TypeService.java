@@ -1,0 +1,29 @@
+package com.liu.service;
+
+import com.liu.pojo.Type;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
+import java.util.List;
+
+/**
+ * @author tianse
+ */
+public interface TypeService {
+
+    Type saveType(Type type);
+
+    Type getType(Long id);
+
+    Type getTypeByname(String name);
+
+    Page<Type> listType(Pageable pageale);
+
+    List<Type> listType();
+
+    List<Type> listTypeTop(Integer size);
+
+    Type updateType(Long id,Type type);
+
+    void deleteType(Long id);
+}
